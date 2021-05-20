@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'pages#root'
   resources :restaurants
   resources :bottles
   devise_for :users
