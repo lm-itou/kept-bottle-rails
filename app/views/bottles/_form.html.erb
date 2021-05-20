@@ -15,12 +15,13 @@
 
   <div class="mb-3">
     <%= form.label :restaurant_id %>
-    <%= form.number_field :restaurant_id %>
+    <%= form.select :restaurant_id, options_of_restaurants, {}, {class: "form-control"} %>
+    <small>Not found?</small>
   </div>
 
   <div class="mb-3">
     <%= form.label :picture %>
-    <%= form.file_field :picture %>
+    <%= form.file_field :picture, class: "form-control" %>
   </div>
 
   <% if @bottle.id %>
