@@ -1,24 +1,27 @@
-# README
+# kept-bottle-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+On RaspberryPi(ruby:2.5, rails:6.1). Created new project.
 
-Things you may want to cover:
+```
+rails new kept-bottle-rails --minimal --database=postgresql
+```
 
-* Ruby version
+Added gem. Also activated active_storage.
 
-* System dependencies
+```
+gem 'devise', '~> 4.7'
+```
 
-* Configuration
+```
+rails g devise:install
+rails g devise user
+rails g scaffold bottle restaurant_id:integer user_id:integer status
+rails g scaffold restaurant name geo user_id:integer
+```
 
-* Database creation
+modify user's migration file.
 
-* Database initialization
+```
+rails db:create db:migrate
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
