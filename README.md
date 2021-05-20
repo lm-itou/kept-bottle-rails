@@ -18,6 +18,7 @@ rails g devise user
 rails g scaffold bottle restaurant_id:integer user_id:integer status
 rails g scaffold restaurant name geo user_id:integer
 rails g controller pages root
+rails active_storage:install
 ```
 
 modify user's migration file.
