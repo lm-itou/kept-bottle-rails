@@ -1,5 +1,6 @@
 class BottlesController < ApplicationController
   before_action :set_bottle, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /bottles
   def index
@@ -22,7 +23,8 @@ class BottlesController < ApplicationController
   # POST /bottles
   def create
     @bottle = Bottle.new(bottle_params)
-
+    @bottle.user = current_user
+    @bottle.status = "active"
     if @bottle.save
       redirect_to @bottle, notice: 'Bottle was successfully created.'
     else
