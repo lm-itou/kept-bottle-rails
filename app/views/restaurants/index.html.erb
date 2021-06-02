@@ -2,7 +2,7 @@
 
 <h1>Restaurants</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,7 +16,7 @@
     <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.name %></td>
-        <td><%= restaurant.geo %></td>
+        <td><%= link_to restaurant.geo, "https://geo3x3.com/#"+restaurant.geo %></td>
         <td><%= restaurant.user_id %></td>
         <td><%= link_to 'Show', restaurant %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-primary" %>
+<%= link_to 'Home', root_path %>

@@ -11,22 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :geo %>
-    <%= form.text_field :geo %>
+    <%= form.text_field :geo, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="mb-3">
+    <%= form.submit nil, class: "btn btn-primary" %>
   </div>
 <% end %>

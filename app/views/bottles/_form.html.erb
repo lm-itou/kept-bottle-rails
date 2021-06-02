@@ -12,11 +12,12 @@
       </ul>
     </div>
   <% end %>
+  <p>Logged in as <%= current_user.name %> <small><%= link_to 'Log out', destroy_user_session_path, method: :delete %></small></p>
 
   <div class="mb-3">
     <%= form.label :restaurant_id %>
     <%= form.select :restaurant_id, options_of_restaurants, {}, {class: "form-control"} %>
-    <small>Not found?</small>
+    <small><%= link_to 'Not found?', new_restaurant_path %></small>
   </div>
 
   <div class="mb-3">

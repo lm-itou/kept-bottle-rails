@@ -4,7 +4,11 @@ class BottlesController < ApplicationController
 
   # GET /bottles
   def index
-    @bottles = Bottle.all
+    if params[:all]
+      @bottles = Bottle.all
+    else
+      @bottles = Bottle.where(user_id: current_user.id).order("id asc")
+    end
   end
 
   # GET /bottles/1

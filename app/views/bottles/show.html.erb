@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+  <div class="col-6">
 <p>
   <strong>Restaurant:</strong>
   <%= @bottle.restaurant_id %>
@@ -14,13 +16,15 @@
   <strong>Status:</strong>
   <%= @bottle.status %>
 </p>
-
-<% if @bottle.picture.attached? %>
-  <%= image_tag @bottle.picture %>
-<% else %>
-  picture not found
-<% end %>
-
+  </div>
+  <div class="col-6">
+  <% if @bottle.picture.attached? %>
+    <%= image_tag @bottle.picture, class: "img img-responsive img-rounded", style: "max-height: 360px" %>
+  <% else %>
+    picture not found
+  <% end %>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_bottle_path(@bottle) %> |
 <%= link_to 'Bottles', bottles_path %>
