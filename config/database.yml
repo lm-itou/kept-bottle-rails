@@ -82,5 +82,3 @@ test:
 production:
   <<: *default
   database: kept_bottle_rails_production
-  username: kept_bottle_rails
-  password: <%= ENV['KEPT_BOTTLE_RAILS_DATABASE_PASSWORD'] %>
