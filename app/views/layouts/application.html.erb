@@ -13,6 +13,9 @@
 
   <body>
     <div class="container">
+      <% if notice %>
+        <div id="notice" class="alert alert-success"><%= notice %></div>
+      <% end %>
       <%= yield %>
     </div>
     <%# js for bootstrap is omitted for now. %>
