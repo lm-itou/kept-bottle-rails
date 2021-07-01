@@ -28,12 +28,13 @@
   <% if @bottle.id %>
     <div class="mb-3">
       <%= form.label :status %>
-      <%= form.text_field :status %>
+      <%= form.select :status, options_of_status, {}, class: "form-control" %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= form.submit 'Keep the bottle', class: 'btn btn-primary' %>
+    <% l = @bottle.id ? 'Update bottle' : 'Keep the bottle' %>
+    <%= form.submit l, class: 'btn btn-primary' %>
   </div>
 <% end %>
   </div>
