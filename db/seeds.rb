@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(id: 1, name: "Admin", email: "info@lmlab.net", password: "secret")
+User.create(name: "Admin", email: "info@lmlab.net", password: "secret")
 
 if Rails.env == "development"
   Restaurant.create(name: "Toriyoshi", geo: "E91237573841", user_id: 1)
