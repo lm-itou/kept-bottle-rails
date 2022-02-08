@@ -12,9 +12,14 @@
   </head>
 
   <body>
-    <div class="container">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">KeptBottleRails</a>
+      </div>
+    </nav>
+    <div class="container" style="padding-top: 12px">
       <% if notice %>
-        <div id="notice" class="alert alert-success"><%= notice %></div>
+        <div id="notice" class="alert alert-success" style="margin-top: 12px"><%= notice %></div>
       <% end %>
       <%= yield %>
     </div>
