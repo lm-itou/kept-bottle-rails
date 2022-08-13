@@ -33,3 +33,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.7'
 gem 'image_processing', '~> 1.12'
 gem "aws-sdk-s3", require: false
+# Since Ruby 3.1
+gem 'net-smtp', '~> 0.3'
+gem 'net-pop', '~> 0.1'
+gem 'net-imap', '~> 0.2'
