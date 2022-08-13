@@ -1,26 +1,18 @@
+<h2><%= @bottle.restaurant.name %></h2>
+
 <div class="row">
-  <div class="col-6">
-<p>
-  <strong>Restaurant:</strong>
-  <%= @bottle.restaurant_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @bottle.user_id %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @bottle.status %>
-</p>
-  </div>
-  <div class="col-6">
+  <div class="col-sm-6">
   <% if @bottle.picture.attached? %>
     <%= image_tag @bottle.picture.variant(resize:'300x300'), class: "img img-responsive img-rounded", style: "max-height: 360px" %>
   <% else %>
-    picture not found
+    <%= image_tag "https://via.placeholder.com/300", class: "card-img-top" %>
   <% end %>
+  </div>
+  <div class="col-sm-6">
+    <%= @bottle.updated_at.strftime("%F %T") %>
+    <%= @bottle.status_text %>
+    <strong>登録ユーザ:</strong>
+    <%= @bottle.user.name %>
   </div>
 </div>
 

@@ -7,7 +7,8 @@ class BottlesController < ApplicationController
     if params[:all]
       @bottles = Bottle.all
     else
-      @bottles = Bottle.where(user_id: current_user.id).order("id asc")
+      @bottles = Bottle.where(user_id: current_user.id,status: "active").order("id asc")
+      @inactive_bottles = Bottle.where(user_id: current_user.id).where("status != 'active'").order("id asc")
     end
   end
 
