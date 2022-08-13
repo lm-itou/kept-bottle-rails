@@ -1,6 +1,8 @@
-<h1>Editing Bottle</h1>
+<h1>ボトルの更新</h1>
 
 <%= render 'form', bottle: @bottle %>
 
-<%= link_to 'Show', @bottle %> |
-<%= link_to 'Back', bottles_path %>
+<p class="mt-3">
+<%= link_to 'Show', @bottle %>
+<%= link_to '<i class="bi bi-list"></i> 登録済みボトルの一覧'.html_safe, bottles_path, class: "btn btn-sm btn-light" %>
+</p>

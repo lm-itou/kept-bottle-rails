@@ -1,6 +1,4 @@
-<p>Logged in as <%= current_user.name %> <small><%= link_to 'Log out', destroy_user_session_path, method: :delete %></small></p>
-
-<h1>Bottles</h1>
+<h1>キープ中のボトル一覧</h1>
 
 <table class="table">
   <thead>
@@ -34,4 +32,4 @@
 
 <br>
 
-<%= link_to 'Add Bottle', new_bottle_path, class: "btn btn-primary" %>
+<%= link_to 'ボトルを追加する', new_bottle_path, class: "btn btn-primary" %>

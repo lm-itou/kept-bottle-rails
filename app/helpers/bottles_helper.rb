@@ -4,6 +4,6 @@ module BottlesHelper
   end
 
   def options_of_status
-    [["Active","active"],["Empty","empty"],["Expired","expired"]]
+    [["キープ中","active"],["空","empty"],["期限切れ","expired"]]
   end
 end

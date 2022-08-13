@@ -30,7 +30,7 @@ class BottlesController < ApplicationController
     @bottle.user = current_user
     @bottle.status = "active"
     if @bottle.save
-      redirect_to @bottle, notice: 'Bottle was successfully created.'
+      redirect_to @bottle, notice: 'ボトルをキープしました！'
     else
       render :new
     end
@@ -39,7 +39,7 @@ class BottlesController < ApplicationController
   # PATCH/PUT /bottles/1
   def update
     if @bottle.update(bottle_params)
-      redirect_to @bottle, notice: 'Bottle was successfully updated.'
+      redirect_to @bottle, notice: 'ボトルの情報を更新しました。'
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class BottlesController < ApplicationController
   # DELETE /bottles/1
   def destroy
     @bottle.destroy
-    redirect_to bottles_url, notice: 'Bottle was successfully destroyed.'
+    redirect_to bottles_url, notice: 'ボトルを削除しました。'
   end
 
   private

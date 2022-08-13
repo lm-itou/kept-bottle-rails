@@ -15,6 +15,7 @@ gem 'devise', '~> 4.7'
 ```
 rails g devise:install
 rails g devise user
+rails g devise:views
 rails g scaffold bottle restaurant_id:integer user_id:integer status
 rails g scaffold restaurant name geo user_id:integer
 rails g controller pages root
@@ -33,3 +34,9 @@ rails db:create db:migrate
 heroku git:remote -a kept-bottle-stg
 git push heroku main
 ```
+
+
+## Links
+- https://getbootstrap.com/
+- https://www.irasutoya.com/
+- https://www.pakutaso.com/photo/27417.html
