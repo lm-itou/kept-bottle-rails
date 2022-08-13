@@ -30,7 +30,6 @@ rails db:create db:migrate
 ## Deployment
 
 ```
-git:remote -a kept-bottle-stg
+heroku git:remote -a kept-bottle-stg
 git push heroku main
 ```
-TODO: doesn't work because the bundle is created only for arm(raspi).
